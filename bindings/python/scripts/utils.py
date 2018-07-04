@@ -47,7 +47,7 @@ def se3ToXYZQUAT(M):
     xyz = M.translation
     quat = se3.Quaternion(M.rotation).coeffs()
     return [float(xyz[0, 0]), float(xyz[1, 0]), float(xyz[2, 0]),
-            float(quat[0, 0]), float(quat[1, 0]), float(quat[2, 0]), float(quat[3, 0])]
+            float(quat[3, 0]), float(quat[0, 0]), float(quat[1, 0]), float(quat[2, 0])]
 
 
 def XYZQUATToSe3(xyzq):
